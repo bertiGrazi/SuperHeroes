@@ -1,5 +1,5 @@
 # SuperHeroes
-08/10/2020 - App Super Heroes
+<b>08/10/2020 - App Super Heroes</b>
 
 Nesse aplicativo contém:
   <ul>

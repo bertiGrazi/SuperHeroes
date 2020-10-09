@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperHeroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-MX-1R7">
+                                <rect key="frame" x="68" y="61" width="277" height="32"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="fWy-9n-tO9"/>
+                                    <constraint firstAttribute="height" constant="31" id="twp-3A-UwE"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Marvel"/>
+                                    <segment title="DC"/>
+                                </segments>
+                                <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="changedSegmentedControlSuperHeroes:" destination="BYZ-38-t0r" eventType="valueChanged" id="6yc-a8-s30"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kJL-F0-ICC">
+                                <rect key="frame" x="0.0" y="100" width="414" height="804"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="804" id="2Iy-q9-H7f"/>
+                                    <constraint firstAttribute="width" constant="414" id="i7w-n3-yI9"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuperHeroesDetail" rowHeight="142" id="deC-F4-4wD" customClass="SuperHeroesDetail" customModule="SuperHeroes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="142"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="deC-F4-4wD" id="jAa-6T-ZYf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="clR-AW-N4m">
+                                                    <rect key="frame" x="8" y="6" width="178" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="178" id="OAB-fK-g7t"/>
+                                                        <constraint firstAttribute="height" constant="128" id="eCX-RB-54M"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zll-gw-HGt">
+                                                    <rect key="frame" x="210" y="48" width="173" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="173" id="k8m-xY-7TV"/>
+                                                        <constraint firstAttribute="height" constant="21" id="mIm-Wn-cuP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zll-gw-HGt" firstAttribute="leading" secondItem="clR-AW-N4m" secondAttribute="trailing" constant="24" id="4EI-op-KX1"/>
+                                                <constraint firstItem="clR-AW-N4m" firstAttribute="leading" secondItem="jAa-6T-ZYf" secondAttribute="leading" constant="8" id="7Jp-Yj-YsH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zll-gw-HGt" secondAttribute="bottom" constant="62" id="C3D-8h-ls4"/>
+                                                <constraint firstItem="zll-gw-HGt" firstAttribute="top" secondItem="jAa-6T-ZYf" secondAttribute="topMargin" constant="37" id="Cmg-hp-owq"/>
+                                                <constraint firstAttribute="bottom" secondItem="clR-AW-N4m" secondAttribute="bottom" constant="8" id="D4n-m7-4ef"/>
+                                                <constraint firstItem="zll-gw-HGt" firstAttribute="leading" secondItem="clR-AW-N4m" secondAttribute="trailing" constant="24" id="D57-oa-R8z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zll-gw-HGt" secondAttribute="trailing" constant="11" id="kZ9-8l-skL"/>
+                                                <constraint firstItem="clR-AW-N4m" firstAttribute="top" secondItem="jAa-6T-ZYf" secondAttribute="top" constant="6" id="n0X-Ho-5FW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="imageViewSuperHeroes" destination="clR-AW-N4m" id="aFN-7o-Rt3"/>
+                                            <outlet property="labelSuperHeroesName" destination="zll-gw-HGt" id="msF-uo-5LL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cnP-MX-1R7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="I5g-Cu-72e"/>
+                            <constraint firstItem="kJL-F0-ICC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Is2-8b-4bs"/>
+                            <constraint firstAttribute="bottom" secondItem="kJL-F0-ICC" secondAttribute="bottom" constant="-8" id="J2u-ht-lHB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cnP-MX-1R7" secondAttribute="trailing" constant="69" id="LrZ-ur-mYA"/>
+                            <constraint firstItem="cnP-MX-1R7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="fia-8m-gdV"/>
+                            <constraint firstItem="kJL-F0-ICC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vSf-ZC-gfa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControlSuperHeroes" destination="cnP-MX-1R7" id="lIX-Tb-V2o"/>
+                        <outlet property="tableViewSuperHeroes" destination="kJL-F0-ICC" id="k3F-VS-joZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
